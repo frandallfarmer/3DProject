@@ -25,17 +25,17 @@ difference() {
 
     // Slot on face 1 (front, centered, from top down)
     translate([face_width/2 - slot_width/2, -0.1, pillar_height - slot_from_top - slot_height])
-        cube([slot_width, slot_depth + 0.1, slot_height]);
+        cube([slot_width, wall_thickness + 0.1, slot_height]);
 
     // Slot on face 2 (right, centered, from top down)
-    translate([face_width - 0.1, face_width/2 - slot_width/2, pillar_height - slot_from_top - slot_height])
-        cube([slot_depth + 0.1, slot_width, slot_height]);
+    translate([face_width - wall_thickness, face_width/2 - slot_width/2, pillar_height - slot_from_top - slot_height])
+        cube([wall_thickness + 0.1, slot_width, slot_height]);
 
     // Slot on face 3 (back, centered, from top down)
-    translate([face_width/2 - slot_width/2, face_width - slot_depth - 0.1, pillar_height - slot_from_top - slot_height])
-        cube([slot_width, slot_depth + 0.1, slot_height]);
+    translate([face_width/2 - slot_width/2, face_width - wall_thickness, pillar_height - slot_from_top - slot_height])
+        cube([slot_width, wall_thickness + 0.1, slot_height]);
 
     // Slot on face 4 (left, centered, from top down)
     translate([-0.1, face_width/2 - slot_width/2, pillar_height - slot_from_top - slot_height])
-        cube([slot_depth + 0.1, slot_width, slot_height]);
+        cube([wall_thickness + 0.1, slot_width, slot_height]);
 }
