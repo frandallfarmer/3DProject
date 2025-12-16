@@ -71,8 +71,8 @@ module render_all() {
     display_pos(5) {
         wallify() { PILLAR_cave(); }};
 }
-render_all();
-//wallify() { PILLAR_cave(); };
+//render_all();
+wallify() { PILLAR_slim_diag_rect(); };
 
 
 
@@ -83,9 +83,10 @@ render_all();
 
 
 module wall_cut(rotation) {
+    //TODO ADD TOLERANCE
     rotate([0,0,rotation])
-        translate([-wall_width/2, 0, pillar_height - tab_height])
-        cube([wall_width, pillar_height, tab_height]);
+        translate([-wall_width/2, 0, pillar_height - tab_height - tolerance])
+        cube([wall_width, pillar_height, tab_height+tolerance]);
 
     rotate([0,0,rotation])
         translate([-wall_width/2, face_width/2, 0])
@@ -111,7 +112,7 @@ module fill_tabs() {
 module fill_tab(rotation) {
     rotate([0,0,rotation])
         translate([-wall_width / 2, (face_width / 2) - kerf + tolerance, 0])
-        cube([wall_width, kerf - tolerance, pillar_height - slot_height]);
+        cube([wall_width, kerf - tolerance, pillar_height - slot_height - tolerance]);
 }
 
 // create slots in a pillar
