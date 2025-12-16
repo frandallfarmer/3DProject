@@ -66,8 +66,9 @@ module render_all() {
         wallify() { PILLAR_cruciform(); }};
     display_pos(3) {
         wallify() { import("src/pillar_stone.stl"); }};
-    display_pos(4) {
-        wallify() { import("src/pillar_beam.stl"); }};
+// source stl defective
+//    display_pos(4) {
+//        wallify() { import("src/pillar_beam.stl"); }};
     display_pos(5) {
         wallify() { PILLAR_cave(); }};
 }
