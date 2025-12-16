@@ -71,8 +71,8 @@ module render_all() {
     display_pos(5) {
         wallify() { PILLAR_cave(); }};
 }
-//render_all();
-wallify() { PILLAR_slim_diag_rect(); };
+render_all();
+//wallify() {import("src/pillar_stone.stl"); };
 
 
 
