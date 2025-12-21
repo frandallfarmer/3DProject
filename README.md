@@ -23,6 +23,14 @@ This pillar connector is designed to work with paper cardstock dungeon walls. Th
 
 Standard PLA settings should work fine. The model is designed for FDM/FFF printers with typical 0.4mm nozzles.
 
+Extra settings:
+ * Required:
+  * "Detect thin walls" or "Wall generator: arachne"
+ * Optional:
+  * "Variable Layer Height"
+
+Use "Detect thin walls" ensures your slicer doesn't skip the "paper-thin" segments that fit the wall slots.  Keeping these thin slots allows compatibilty with preexisting paper wall designs
+
 ## Customization
 
 The OpenSCAD file is parametric. Edit the parameters at the top of `pillar_connector.scad` to adjust:

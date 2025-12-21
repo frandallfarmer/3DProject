@@ -2,17 +2,24 @@
 // DEFINES     //
 //             //
 
+pillar_height_inch = 2;
+face_width_inch = 0.666666;
+slot_height_inch = 1;
+tab_width_inch = 0.25;
+wall_width    = 1.0;             // Width of slot (for cardstock thickness + clearance)
+kerf          = 1.0;             // cut between tab and wall
+tolerance     = 0.8;             // allow wiggle room below tab
+
+
+// the calculated values below don't show up in the openscad customizer pane
 function inch_to_mm(inches) = inches * 25.4;
 
-pillar_height = inch_to_mm(2);    // 2 inches in mm
-face_width    = inch_to_mm(2/3);  // 2/3 inch in mm
+pillar_height = inch_to_mm(pillar_height_inch);    // 2 inches in mm
+face_width    = inch_to_mm(face_width_inch);  // 2/3 inch in mm
+slot_height   = inch_to_mm(slot_height_inch);   // Height of slot (1 inch, from top down)
+tab_height    = slot_height + inch_to_mm(0.5); // tab extends 1/2" below the slot
+tab_width     = inch_to_mm(tab_width_inch);
 
-wall_width    = 1.0;             // Width of slot (for cardstock thickness + clearance)
-slot_height   = inch_to_mm(1);   // Height of slot (1 inch, from top down)
-tab_height    = slot_height + inch_to_mm(0.5); // tab extends .5 in below the slot
-tab_width     = inch_to_mm(0.25);
-kerf          = 1.0;             // cut between tab and wall
-tolerance     = 0.4;             // allow wiggle room
 
 module PILLAR_original_rect() {
     // the original paper rectangle
@@ -22,7 +29,7 @@ module PILLAR_original_rect() {
 
 module PILLAR_slim_diag_rect() {
     // rotate 45 degrees for a slimmer rectangle
-    
+
     // rotated square is sqrt(2) wide, plus a little extra to fit the tab
     face = face_width / sqrt(2) + (kerf/1.5);
 
@@ -41,42 +48,97 @@ module PILLAR_cruciform() {
     cylinder(h=2, d=face_width, center=true);
 }
 
-module PILLAR_cave() {
+module PILLAR_caveold() {
+    // this first POC model is too ugly and treelike
     width = 24;
     difference() {
-        resize([width+1, width, 56]) 
-            import("src/pillar_cave.stl"); 
+        resize([width+1, width, 56])
+            import("src/pillar_cave.stl");
         trim_top(1);
         bounding_cyl(24);
     }
 }
 
 
+module PILLAR_cave() {
+    width = 21;
+
+    resize([width+1, width, pillar_height])
+        import("src/stalagmite.stl");
+}
+
+module PILLAR_hengestone() {
+    hengewidth = 19.5;
+    translate([-1,0.5,0])
+        resize([hengewidth, hengewidth, pillar_height])
+        import("src/hengestone.stl");
+}
+
+module PILLAR_smallbeam () {
+    beamwidth = 18.5 / sqrt(2);
+    rotate([0,0,45])
+        resize([beamwidth, beamwidth, pillar_height])
+        import("src/wood_beam.stl");
+}
+
+module PILLAR_smallhengestone () {
+    hengewidth = 26 / sqrt(2);
+
+    resize([hengewidth, hengewidth+2, pillar_height])
+        rotate([0,0,45])
+        PILLAR_hengestone();
+}
+
 
 //             //
 // RENDER ALL  //
 //             //
 
-module render_all() {
+
+module display_all_stls() {
     display_pos(0) {
-        wallify() { PILLAR_slim_diag_rect(); }};
+        wallify(all=1) { PILLAR_slim_diag_rect(); }};
     display_pos(1) {
-        wallify() { PILLAR_original_rect(); }};
+        wallify(all=1) { PILLAR_original_rect(); }};
     display_pos(2) {
-        wallify() { PILLAR_cruciform(); }};
+        wallify(all=1) { PILLAR_cruciform(); }};
     display_pos(3) {
-        wallify() { import("src/pillar_stone.stl"); }};
-// source stl defective
-//    display_pos(4) {
-//        wallify() { import("src/pillar_beam.stl"); }};
+        wallify(all=1) { import("src/pillar_cobblewall.stl"); }};
+    display_pos(4) {
+        wallify(all=1) { PILLAR_hengestone(); }};
     display_pos(5) {
-        wallify() { PILLAR_cave(); }};
+        wallify(all=1) { PILLAR_cave(); }};
+    display_pos(6) {
+        wallify(all=1) { import("src/log.stl"); }};
+    display_pos(7) {
+        wallify(all=1) { import("src/wood_beam.stl"); }};
+    display_pos(8) {
+        wallify(all=1) { PILLAR_smallbeam(); }};
+    display_pos(9) {
+        wallify(all=1) { PILLAR_smallhengestone(); }};
+/*
+// source stl defective
+    display_pos(4) {
+        wallify() { import("src/mine_framework.stl"); }};
+*/
 }
-render_all();
-//wallify() {import("src/pillar_stone.stl"); };
 
+module display_all_tab_variants() {
+    display_pos(4) {
+        wallify(b=1) { children(0); }};
+    display_pos(1) {
+        wallify(c=1) { children(0); }};
+    display_pos(2) {
+        wallify(b=1,c=1) { children(0); }};
+    display_pos(3) {
+        wallify(b=1,c=1,d=1) { children(0); }};
+    display_pos(5) {
+        wallify() { children(0); }};
+}
 
-
+display_all_stls();
+//display_all_tab_variants() { PILLAR_smallbeam(); };
+//wallify(c=1) { PILLAR_slim_diag_rect(); };
 
 //             //
 // LIBRARY     //
@@ -84,7 +146,6 @@ render_all();
 
 
 module wall_cut(rotation) {
-    //TODO ADD TOLERANCE
     rotate([0,0,rotation])
         translate([-wall_width/2, 0, pillar_height - tab_height - tolerance])
         cube([wall_width, pillar_height, tab_height+tolerance]);
@@ -94,20 +155,14 @@ module wall_cut(rotation) {
         cube([wall_width, pillar_height, pillar_height]);
 }
 
-// first we cut space for the 4 walls
-module cut_walls() {
-    wall_cut(0);
-    wall_cut(90);
-    wall_cut(180);
-    wall_cut(270);
-}
-
-// then backfill the tab that fits in the kerf
-module fill_tabs() {
-    fill_tab(0);
-    fill_tab(90);
-    fill_tab(180);
-    fill_tab(270);
+module cut_walls(rotation) {
+    // first we cut space
+    difference() {
+        children(0);
+        wall_cut(rotation);
+    }
+    // then backfill the tab that fits in the kerf
+    fill_tab(rotation);
 }
 
 module fill_tab(rotation) {
@@ -117,21 +172,20 @@ module fill_tab(rotation) {
 }
 
 // create slots in a pillar
-module wallify() {
-    // first cut holes for the wall to fit through
-    difference() {
+module wallify(b=0, c=0, d=0, all=0) {
+
+    cut_walls(0)
+        cut_walls(090 * (b+all))
+        cut_walls(180 * (c+all))
+        cut_walls(270 * (d+all))
         children(0);
-        cut_walls();
-        trim_top();
-    }
-    // then insert the tiny walls that fit in the tabs' slim kerf
-    fill_tabs();
 }
 
 //move a completed shape into display position
 module display_pos(pos) {
+    row = ceil((pos) / 8);
     rotate([0, 0, 45 * pos])
-        translate([pillar_height, 0, 0])
+        translate([row * pillar_height, 0, 0])
         children(0);
 }
 
