@@ -21,6 +21,34 @@ tab_height    = slot_height + inch_to_mm(0.5); // tab extends 1/2" below the slo
 tab_width     = inch_to_mm(tab_width_inch);
 
 
+module get_modelname(i) {
+    if (i == "slimrect") PILLAR_slim_diag_rect();
+    else if (i == "origrect") PILLAR_original_rect();
+    else if (i == "cruciform") PILLAR_cruciform();
+    else if (i == "cobblewall") import("src/pillar_cobblewall.stl");
+    else if (i == "hengestone") PILLAR_hengestone();
+    else if (i == "stalagmite") PILLAR_cave();
+    else if (i == "log") import("src/log.stl");
+    else if (i == "woodbeam") import("src/wood_beam.stl");
+    else if (i == "slimbeam") PILLAR_smallbeam();
+    else if (i == "slimhengestone") PILLAR_smallhengestone();
+}
+module wallify_variantname(variant) {
+    if (variant == "end")           wallify()        children(0);
+    else if (variant == "corner")   wallify(b=1)     children(0);
+    else if (variant == "straight") wallify(c=1)     children(0);
+    else if (variant == "tee")      wallify(b=1,c=1) children(0);
+    else if (variant == "allways")  wallify(all=1)   children(0);
+}
+
+module build_byname(model, variant="allways") {
+    wallify_variantname(variant) get_modelname(model) ;
+}
+
+//                        //
+// Pillar model variants  //
+//                        //
+
 module PILLAR_original_rect() {
     // the original paper rectangle
     translate([0,0,pillar_height/2])
@@ -59,7 +87,6 @@ module PILLAR_caveold() {
     }
 }
 
-
 module PILLAR_cave() {
     width = 21;
 
@@ -90,55 +117,6 @@ module PILLAR_smallhengestone () {
 }
 
 
-//             //
-// RENDER ALL  //
-//             //
-
-
-module display_all_stls() {
-    display_pos(0) {
-        wallify(all=1) { PILLAR_slim_diag_rect(); }};
-    display_pos(1) {
-        wallify(all=1) { PILLAR_original_rect(); }};
-    display_pos(2) {
-        wallify(all=1) { PILLAR_cruciform(); }};
-    display_pos(3) {
-        wallify(all=1) { import("src/pillar_cobblewall.stl"); }};
-    display_pos(4) {
-        wallify(all=1) { PILLAR_hengestone(); }};
-    display_pos(5) {
-        wallify(all=1) { PILLAR_cave(); }};
-    display_pos(6) {
-        wallify(all=1) { import("src/log.stl"); }};
-    display_pos(7) {
-        wallify(all=1) { import("src/wood_beam.stl"); }};
-    display_pos(8) {
-        wallify(all=1) { PILLAR_smallbeam(); }};
-    display_pos(9) {
-        wallify(all=1) { PILLAR_smallhengestone(); }};
-/*
-// source stl defective
-    display_pos(4) {
-        wallify() { import("src/mine_framework.stl"); }};
-*/
-}
-
-module display_all_tab_variants() {
-    display_pos(4) {
-        wallify(b=1) { children(0); }};
-    display_pos(1) {
-        wallify(c=1) { children(0); }};
-    display_pos(2) {
-        wallify(b=1,c=1) { children(0); }};
-    display_pos(3) {
-        wallify(b=1,c=1,d=1) { children(0); }};
-    display_pos(5) {
-        wallify() { children(0); }};
-}
-
-display_all_stls();
-//display_all_tab_variants() { PILLAR_smallbeam(); };
-//wallify(c=1) { PILLAR_slim_diag_rect(); };
 
 //             //
 // LIBRARY     //

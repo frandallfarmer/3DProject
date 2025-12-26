@@ -23,7 +23,6 @@ This pillar connector is designed to work with paper cardstock dungeon walls. Th
 
 Standard PLA settings should work fine. The model is designed for FDM/FFF printers with typical 0.4mm nozzles.
 
-Extra settings:
  * Required:
   * "Detect thin walls" or "Wall generator: arachne"
  * Optional:
