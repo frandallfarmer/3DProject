@@ -26,9 +26,10 @@ Standard PLA settings should work fine. The model is designed for FDM/FFF printe
  * Required:
   * "Detect thin walls" or "Wall generator: arachne"
  * Optional:
+  * Nominal layer height: <= 0.20 mm
   * "Variable Layer Height"
 
-Use "Detect thin walls" ensures your slicer doesn't skip the "paper-thin" segments that fit the wall slots.  Keeping these thin slots allows compatibilty with preexisting paper wall designs
+Use "Detect thin walls" ensures your slicer doesn't skip the "paper-thin" segments that fit the wall slots.  Keeping these thin slots allows compatibilty with preexisting paper wall designs.
 
 ## Customization
 

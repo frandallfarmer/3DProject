@@ -7,17 +7,18 @@ include <connectors.scad>;
 
 module display_all_stls() {
 
-    display_pos(0) { build_byname("slimrect"); };
-    display_pos(1) { build_byname("origrect"); };
-    display_pos(2) { build_byname("cruciform"); };
-    display_pos(3) { build_byname("cobblewall"); };
-    display_pos(4) { build_byname("hengestone"); };
-    display_pos(5) { build_byname("stalagmite"); };
-    display_pos(6) { build_byname("log"); };
-    display_pos(7) { build_byname("woodbeam"); };
-    display_pos(8) { build_byname("slimbeam"); };
-    display_pos(9) { build_byname("slimhengestone"); };
-  
+    display_pos(00) { build_byname("slimrect"); };
+    display_pos(01) { build_byname("origrect"); };
+    display_pos(02) { build_byname("cruciform"); };
+    display_pos(03) { build_byname("cobblewall"); };
+    display_pos(04) { build_byname("hengestone"); };
+    display_pos(05) { build_byname("stalagmite"); };
+    display_pos(06) { build_byname("log"); };
+    display_pos(07) { build_byname("woodbeam"); };
+    display_pos(08) { build_byname("slimbeam"); };
+    display_pos(09) { build_byname("slimhengestone"); };
+    display_pos(10) { build_byname("aggregate"); };
+
 /*
 // source stl defective
     display_pos(20) {
@@ -38,6 +39,6 @@ module display_all_tab_variants() {
         wallify() { children(0); }};
 }
 
-//display_all_stls();
-display_all_tab_variants() { PILLAR_smallbeam(); };
+display_all_stls();
+//display_all_tab_variants() { PILLAR_smallbeam(); };
 //wallify(c=1) { PILLAR_slim_diag_rect(); };

@@ -32,6 +32,7 @@ module get_modelname(i) {
     else if (i == "woodbeam") import("src/wood_beam.stl");
     else if (i == "slimbeam") PILLAR_smallbeam();
     else if (i == "slimhengestone") PILLAR_smallhengestone();
+    else if (i == "aggregate") PILLAR_aggregate();
 }
 module wallify_variantname(variant) {
     if (variant == "end")           wallify()        children(0);
@@ -101,8 +102,16 @@ module PILLAR_hengestone() {
         import("src/hengestone.stl");
 }
 
+
+module PILLAR_aggregate() {
+    mywidth = 19.8;
+    resize([mywidth, mywidth, pillar_height])
+        rotate([0,0,45])
+        import("src/aggregate.stl");
+}
+
 module PILLAR_smallbeam () {
-    beamwidth = 18.5 / sqrt(2);
+    beamwidth = 19 / sqrt(2);
     rotate([0,0,45])
         resize([beamwidth, beamwidth, pillar_height])
         import("src/wood_beam.stl");
@@ -146,7 +155,22 @@ module cut_walls(rotation) {
 module fill_tab(rotation) {
     rotate([0,0,rotation])
         translate([-wall_width / 2, (face_width / 2) - kerf + tolerance, 0])
-        cube([wall_width, kerf - tolerance, pillar_height - slot_height - tolerance]);
+        maketab();
+}
+
+module maketab() {
+    curtain_rotation = 75;
+    union() {
+        translate([-0.08, 0, 0])
+            cube([wall_width + .16, kerf - tolerance, pillar_height - slot_height - tolerance]);
+
+        translate([wall_width - .11, .15, 0])
+            rotate([0,0,-curtain_rotation])
+            cube([wall_width, kerf - tolerance, pillar_height - slot_height - tolerance]);
+        translate([-0.15, .18 -wall_width, 0])
+            rotate([0,0,curtain_rotation])
+            cube([wall_width, kerf - tolerance, pillar_height - slot_height - tolerance]);
+    }
 }
 
 // create slots in a pillar

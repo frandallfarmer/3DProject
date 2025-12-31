@@ -13,6 +13,7 @@ $models = @(
     "woodbeam"
     "slimbeam"
     "slimhengestone"
+    "aggregate"
 )
 
 $variants = @(
