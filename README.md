@@ -6,7 +6,7 @@
 
 This pillar connector is designed to work with paper cardstock dungeon walls. The connector features slots on all four sides that accept paper wall tabs, allowing you to build modular dungeon interiors and building layouts. Paper Realms is also contributing templates and cutfiles for their tab-and-slot design model for anyone to customize for personal use!
 
-This project was facilitated by [OldSchoolDM](https://oldschooldm.com), a paper-craft terrain aficionado, and implemented by his son. The driving desire was to support the minimum storage requirements for gaming terrain for dungeons and buildings. Inspired by the tab-and-slot design of Paper Realms, we wanted to add some heft - sturdiness and weight to the connectors. 3D Printing seemed like the perfect thing to hybrid with these compact but very detailed wall designs.
+This project was facilitated by [OldSchoolDM](http://oldschooldm.com), a paper-craft terrain aficionado, and implemented by his son. The driving desire was to support the minimum storage requirements for gaming terrain for dungeons and buildings. Inspired by the tab-and-slot design of Paper Realms, we wanted to add some heft - sturdiness and weight to the connectors. 3D Printing seemed like the perfect thing to hybrid with these compact but very detailed wall designs.
 
 ## The Walls
 
@@ -75,4 +75,4 @@ Then open http://localhost:8000 in your browser.
 
 ## License
 
-Everything here is under CC BY-SA-4.0, except the ViewSTL js files, which are under MIT - visit that project for the latest.
+Everything here is under CC BY-SA-4.0, except the ViewSTL js files, which are under MIT - https://sourceforge.net/projects/viewstl/ for the latest.
