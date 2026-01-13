@@ -46,4 +46,4 @@ openscad -o pillar_connector.stl pillar_connector.scad
 
 ## License
 
-Open source - feel free to use, modify, and share.
+CC SA-BY-4.0
