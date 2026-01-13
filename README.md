@@ -44,6 +44,49 @@ Regenerate the STL with:
 openscad -o pillar_connector.stl pillar_connector.scad
 ```
 
+## STL Viewer
+
+This repository includes a web-based STL viewer for previewing all models. The viewer features:
+- Split-screen interface with file list and 3D preview
+- White background with flat-shaded models and black edge outlines
+- Interactive rotation and zoom controls
+- Automatic file list generation
+
+### Viewing Models
+
+**Online:** Visit the GitHub Pages site (once deployed) to view all models in your browser.
+
+**Locally:**
+```bash
+python3 -m http.server 8000
+```
+Then open http://localhost:8000 in your browser.
+
+### Updating the File List
+
+The file list is automatically generated from the `/built_stls` directory:
+
+**Manual update:**
+```bash
+python3 build_file_list.py
+```
+
+**Automatic update:** When you push STL files to the `built_stls/` directory, a GitHub Action automatically:
+1. Runs `build_file_list.py` to regenerate `stl_files.json`
+2. Commits the updated file list
+3. Deploys to GitHub Pages
+
+You can also manually trigger the workflow from the GitHub Actions tab.
+
+### GitHub Pages Setup
+
+To enable GitHub Pages deployment:
+1. Go to repository Settings → Pages
+2. Under "Build and deployment", select "GitHub Actions" as the source
+3. Push changes to trigger the deployment
+
+The site will be available at `https://yourusername.github.io/repository-name/`
+
 ## License
 
 CC SA-BY-4.0

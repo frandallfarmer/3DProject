@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STL Viewer - 3D Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        #sidebar {
+            width: 300px;
+            background-color: #f5f5f5;
+            border-right: 2px solid #ccc;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        #viewer-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+
+        #current-file {
+            padding: 15px 20px;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            border-bottom: 2px solid #555;
+        }
+
+        #stl_cont {
+            flex: 1;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .file-group {
+            margin-bottom: 20px;
+        }
+
+        .group-title {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+        }
+
+        .file-list {
+            list-style: none;
+        }
+
+        .file-item {
+            padding: 8px 12px;
+            margin: 4px 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+        }
+
+        .file-item:hover {
+            background-color: #e3f2fd;
+            border-color: #2196F3;
+        }
+
+        .file-item.active {
+            background-color: #2196F3;
+            color: white;
+            border-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h1>STL Files</h1>
+        <div id="file-list-container">
+            <p style="padding: 20px; color: #666;">Loading files...</p>
+        </div>
+    </div>
+
+    <div id="viewer-container">
+        <div id="current-file">Select an STL file to view</div>
+        <div id="stl_cont"></div>
+    </div>
+
+    <script src="js/stl_viewer.min.js"></script>
+    <script>
+        let stl_viewer = null;
+        const viewerElement = document.getElementById("stl_cont");
+        const currentFileDisplay = document.getElementById("current-file");
+        let fileItems = [];
+
+        // Load file list from JSON and build the sidebar
+        async function loadFileList() {
+            try {
+                const response = await fetch('stl_files.json');
+                const categories = await response.json();
+
+                const container = document.getElementById('file-list-container');
+                container.innerHTML = '';
+
+                categories.forEach(category => {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.className = 'file-group';
+
+                    const titleDiv = document.createElement('div');
+                    titleDiv.className = 'group-title';
+                    titleDiv.textContent = category.display_name;
+                    groupDiv.appendChild(titleDiv);
+
+                    const fileList = document.createElement('ul');
+                    fileList.className = 'file-list';
+
+                    category.files.forEach(file => {
+                        const li = document.createElement('li');
+                        li.className = 'file-item';
+                        li.setAttribute('data-file', file.path);
+                        li.textContent = file.display_name;
+                        fileList.appendChild(li);
+                    });
+
+                    groupDiv.appendChild(fileList);
+                    container.appendChild(groupDiv);
+                });
+
+                // Get all file items after they're created
+                fileItems = document.querySelectorAll('.file-item');
+
+                // Add click handlers
+                fileItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const filename = this.getAttribute('data-file');
+                        loadSTL(filename, this);
+                    });
+                });
+
+                // Load first file by default
+                if (fileItems.length > 0) {
+                    const firstItem = fileItems[0];
+                    const firstFile = firstItem.getAttribute('data-file');
+                    loadSTL(firstFile, firstItem);
+                }
+            } catch (error) {
+                console.error('Error loading file list:', error);
+                document.getElementById('file-list-container').innerHTML =
+                    '<p style="padding: 20px; color: red;">Error loading file list</p>';
+            }
+        }
+
+        function loadSTL(filename, clickedElement) {
+            // Clear existing viewer
+            if (stl_viewer) {
+                viewerElement.innerHTML = '';
+            }
+
+            // Create new viewer with the selected file
+            stl_viewer = new StlViewer(viewerElement, {
+                models: [{
+                    id: 0,
+                    filename: filename,
+                    color: '#808080',
+                    display: 'flat'
+                }],
+                auto_rotate: false,
+                bgcolor: '#ffffff',
+                canvas_width: viewerElement.clientWidth,
+                canvas_height: viewerElement.clientHeight,
+                edges: true,
+                edges_color: '#000000'
+            });
+
+            // Update current file display
+            const displayName = filename.replace('built_stls/output_', '').replace('.stl', '');
+            currentFileDisplay.textContent = displayName;
+
+            // Update active state
+            fileItems.forEach(item => item.classList.remove('active'));
+            if (clickedElement) {
+                clickedElement.classList.add('active');
+            }
+        }
+
+        // Initialize when page loads
+        loadFileList();
+    </script>
+</body>
+</html>
