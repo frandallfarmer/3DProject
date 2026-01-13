@@ -5,31 +5,31 @@
     "files": [
       {
         "filename": "output_aggregate_allways.stl",
-        "path": "/built_stls/output_aggregate_allways.stl",
+        "path": "built_stls/output_aggregate_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_aggregate_corner.stl",
-        "path": "/built_stls/output_aggregate_corner.stl",
+        "path": "built_stls/output_aggregate_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_aggregate_end.stl",
-        "path": "/built_stls/output_aggregate_end.stl",
+        "path": "built_stls/output_aggregate_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_aggregate_straight.stl",
-        "path": "/built_stls/output_aggregate_straight.stl",
+        "path": "built_stls/output_aggregate_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_aggregate_tee.stl",
-        "path": "/built_stls/output_aggregate_tee.stl",
+        "path": "built_stls/output_aggregate_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -41,31 +41,31 @@
     "files": [
       {
         "filename": "output_cobblewall_allways.stl",
-        "path": "/built_stls/output_cobblewall_allways.stl",
+        "path": "built_stls/output_cobblewall_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_cobblewall_corner.stl",
-        "path": "/built_stls/output_cobblewall_corner.stl",
+        "path": "built_stls/output_cobblewall_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_cobblewall_end.stl",
-        "path": "/built_stls/output_cobblewall_end.stl",
+        "path": "built_stls/output_cobblewall_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_cobblewall_straight.stl",
-        "path": "/built_stls/output_cobblewall_straight.stl",
+        "path": "built_stls/output_cobblewall_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_cobblewall_tee.stl",
-        "path": "/built_stls/output_cobblewall_tee.stl",
+        "path": "built_stls/output_cobblewall_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -77,31 +77,31 @@
     "files": [
       {
         "filename": "output_cruciform_allways.stl",
-        "path": "/built_stls/output_cruciform_allways.stl",
+        "path": "built_stls/output_cruciform_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_cruciform_corner.stl",
-        "path": "/built_stls/output_cruciform_corner.stl",
+        "path": "built_stls/output_cruciform_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_cruciform_end.stl",
-        "path": "/built_stls/output_cruciform_end.stl",
+        "path": "built_stls/output_cruciform_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_cruciform_straight.stl",
-        "path": "/built_stls/output_cruciform_straight.stl",
+        "path": "built_stls/output_cruciform_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_cruciform_tee.stl",
-        "path": "/built_stls/output_cruciform_tee.stl",
+        "path": "built_stls/output_cruciform_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -113,31 +113,31 @@
     "files": [
       {
         "filename": "output_hengestone_allways.stl",
-        "path": "/built_stls/output_hengestone_allways.stl",
+        "path": "built_stls/output_hengestone_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_hengestone_corner.stl",
-        "path": "/built_stls/output_hengestone_corner.stl",
+        "path": "built_stls/output_hengestone_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_hengestone_end.stl",
-        "path": "/built_stls/output_hengestone_end.stl",
+        "path": "built_stls/output_hengestone_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_hengestone_straight.stl",
-        "path": "/built_stls/output_hengestone_straight.stl",
+        "path": "built_stls/output_hengestone_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_hengestone_tee.stl",
-        "path": "/built_stls/output_hengestone_tee.stl",
+        "path": "built_stls/output_hengestone_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -149,31 +149,31 @@
     "files": [
       {
         "filename": "output_log_allways.stl",
-        "path": "/built_stls/output_log_allways.stl",
+        "path": "built_stls/output_log_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_log_corner.stl",
-        "path": "/built_stls/output_log_corner.stl",
+        "path": "built_stls/output_log_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_log_end.stl",
-        "path": "/built_stls/output_log_end.stl",
+        "path": "built_stls/output_log_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_log_straight.stl",
-        "path": "/built_stls/output_log_straight.stl",
+        "path": "built_stls/output_log_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_log_tee.stl",
-        "path": "/built_stls/output_log_tee.stl",
+        "path": "built_stls/output_log_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -185,31 +185,31 @@
     "files": [
       {
         "filename": "output_origrect_allways.stl",
-        "path": "/built_stls/output_origrect_allways.stl",
+        "path": "built_stls/output_origrect_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_origrect_corner.stl",
-        "path": "/built_stls/output_origrect_corner.stl",
+        "path": "built_stls/output_origrect_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_origrect_end.stl",
-        "path": "/built_stls/output_origrect_end.stl",
+        "path": "built_stls/output_origrect_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_origrect_straight.stl",
-        "path": "/built_stls/output_origrect_straight.stl",
+        "path": "built_stls/output_origrect_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_origrect_tee.stl",
-        "path": "/built_stls/output_origrect_tee.stl",
+        "path": "built_stls/output_origrect_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -221,31 +221,31 @@
     "files": [
       {
         "filename": "output_slimbeam_allways.stl",
-        "path": "/built_stls/output_slimbeam_allways.stl",
+        "path": "built_stls/output_slimbeam_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_slimbeam_corner.stl",
-        "path": "/built_stls/output_slimbeam_corner.stl",
+        "path": "built_stls/output_slimbeam_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_slimbeam_end.stl",
-        "path": "/built_stls/output_slimbeam_end.stl",
+        "path": "built_stls/output_slimbeam_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_slimbeam_straight.stl",
-        "path": "/built_stls/output_slimbeam_straight.stl",
+        "path": "built_stls/output_slimbeam_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_slimbeam_tee.stl",
-        "path": "/built_stls/output_slimbeam_tee.stl",
+        "path": "built_stls/output_slimbeam_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -257,31 +257,31 @@
     "files": [
       {
         "filename": "output_slimhengestone_allways.stl",
-        "path": "/built_stls/output_slimhengestone_allways.stl",
+        "path": "built_stls/output_slimhengestone_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_slimhengestone_corner.stl",
-        "path": "/built_stls/output_slimhengestone_corner.stl",
+        "path": "built_stls/output_slimhengestone_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_slimhengestone_end.stl",
-        "path": "/built_stls/output_slimhengestone_end.stl",
+        "path": "built_stls/output_slimhengestone_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_slimhengestone_straight.stl",
-        "path": "/built_stls/output_slimhengestone_straight.stl",
+        "path": "built_stls/output_slimhengestone_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_slimhengestone_tee.stl",
-        "path": "/built_stls/output_slimhengestone_tee.stl",
+        "path": "built_stls/output_slimhengestone_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -293,31 +293,31 @@
     "files": [
       {
         "filename": "output_slimrect_allways.stl",
-        "path": "/built_stls/output_slimrect_allways.stl",
+        "path": "built_stls/output_slimrect_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_slimrect_corner.stl",
-        "path": "/built_stls/output_slimrect_corner.stl",
+        "path": "built_stls/output_slimrect_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_slimrect_end.stl",
-        "path": "/built_stls/output_slimrect_end.stl",
+        "path": "built_stls/output_slimrect_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_slimrect_straight.stl",
-        "path": "/built_stls/output_slimrect_straight.stl",
+        "path": "built_stls/output_slimrect_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_slimrect_tee.stl",
-        "path": "/built_stls/output_slimrect_tee.stl",
+        "path": "built_stls/output_slimrect_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -329,31 +329,31 @@
     "files": [
       {
         "filename": "output_stalagmite_allways.stl",
-        "path": "/built_stls/output_stalagmite_allways.stl",
+        "path": "built_stls/output_stalagmite_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_stalagmite_corner.stl",
-        "path": "/built_stls/output_stalagmite_corner.stl",
+        "path": "built_stls/output_stalagmite_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_stalagmite_end.stl",
-        "path": "/built_stls/output_stalagmite_end.stl",
+        "path": "built_stls/output_stalagmite_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_stalagmite_straight.stl",
-        "path": "/built_stls/output_stalagmite_straight.stl",
+        "path": "built_stls/output_stalagmite_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_stalagmite_tee.stl",
-        "path": "/built_stls/output_stalagmite_tee.stl",
+        "path": "built_stls/output_stalagmite_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }
@@ -365,31 +365,31 @@
     "files": [
       {
         "filename": "output_woodbeam_allways.stl",
-        "path": "/built_stls/output_woodbeam_allways.stl",
+        "path": "built_stls/output_woodbeam_allways.stl",
         "type": "allways",
         "display_name": "Allways"
       },
       {
         "filename": "output_woodbeam_corner.stl",
-        "path": "/built_stls/output_woodbeam_corner.stl",
+        "path": "built_stls/output_woodbeam_corner.stl",
         "type": "corner",
         "display_name": "Corner"
       },
       {
         "filename": "output_woodbeam_end.stl",
-        "path": "/built_stls/output_woodbeam_end.stl",
+        "path": "built_stls/output_woodbeam_end.stl",
         "type": "end",
         "display_name": "End"
       },
       {
         "filename": "output_woodbeam_straight.stl",
-        "path": "/built_stls/output_woodbeam_straight.stl",
+        "path": "built_stls/output_woodbeam_straight.stl",
         "type": "straight",
         "display_name": "Straight"
       },
       {
         "filename": "output_woodbeam_tee.stl",
-        "path": "/built_stls/output_woodbeam_tee.stl",
+        "path": "built_stls/output_woodbeam_tee.stl",
         "type": "tee",
         "display_name": "Tee"
       }

@@ -41,7 +41,7 @@ def build_file_list():
         category, type_name = extract_category_and_type(stl_file.name)
         categories[category].append({
             'filename': stl_file.name,
-            'path': f'/built_stls/{stl_file.name}',
+            'path': f'built_stls/{stl_file.name}',
             'type': type_name,
             'display_name': type_name.capitalize()
         })

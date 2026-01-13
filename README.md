@@ -54,7 +54,7 @@ This repository includes a web-based STL viewer for previewing all models. The v
 
 ### Viewing Models
 
-**Online:** Visit the GitHub Pages site (once deployed) to view all models in your browser.
+**Online:** Visit https://frandallfarmer.github.io/3DProject/ to view all models in your browser.
 
 **Locally:**
 ```bash
@@ -85,7 +85,7 @@ To enable GitHub Pages deployment:
 2. Under "Build and deployment", select "GitHub Actions" as the source
 3. Push changes to trigger the deployment
 
-The site will be available at `https://yourusername.github.io/repository-name/`
+The site will be available at `https://frandallfarmer.github.io/3DProject/`
 
 ## License
 
