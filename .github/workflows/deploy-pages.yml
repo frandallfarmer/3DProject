@@ -31,20 +31,12 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y pandoc
           pandoc README.md -f gfm -t html -s \
-            --metadata pagetitle="D&D Terrain Pillar Connector" \
+            --metadata title="D&D Terrain Pillar Connector" \
             --css=style.css \
             -o index.html
-          ls -la index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Verify files before upload
-        run: |
-          echo "Files in current directory:"
-          ls -la
-          echo "Checking for index.html:"
-          test -f index.html && echo "index.html exists" || echo "index.html MISSING!"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
