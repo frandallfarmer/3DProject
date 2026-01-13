@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>D&D Terrain Pillar Connector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>D&D Terrain Pillar Connector</h1>
+<p>3D printable pillar connector for tabletop RPG paper terrain compatible with Paper Realm's tab-and-slot wall model. <a href="https://paperrealms.com">https://paperrealms.com</a></p>
+
+<h2>Description</h2>
+<p>This pillar connector is designed to work with paper cardstock dungeon walls. The connector features slots on all four sides that accept paper wall tabs, allowing you to build modular dungeon interiors and building layouts. Paper Realms is also contributing templates and cutfiles for their tab-and-slot design model for anyone to customize for personal use!</p>
+
+<p>This project was facilitated by <a href="http://oldschooldm.com">OldSchoolDM</a>, a paper-craft terrain aficionado, and implemented by his son. The driving desire was to support the minimum storage requirements for gaming terrain for dungeons and buildings. Inspired by the tab-and-slot design of Paper Realms, we wanted to add some heft - sturdiness and weight to the connectors. 3D Printing seemed like the perfect thing to hybrid with these compact but very detailed wall designs.</p>
+
+<p><strong><a href="viewer.html">→ View 3D Models in Interactive Viewer</a></strong></p>
+
+<h2>The Walls</h2>
+<p>Paper Realms has contributed templates for you to customize your own paper walls to use with the 3D printed connectors (pillars) for this project. These pillars are compatible with existing 2" Paper Realm's walls - that's been on of our requirements for this project.</p>
+
+<p>See the walls <a href="wall-templates/README.md">README</a> for more.</p>
+
+<h2>The Pillars</h2>
+
+<h3>Specifications</h3>
+<ul>
+<li><strong>Height:</strong> 2 inches (50.8mm)</li>
+<li><strong>Cross-section:</strong> 2/3" × 2/3" square (16.93mm)</li>
+<li><strong>Slots:</strong> Four slots (one per face), centered, running 1" down from top</li>
+<li><strong>Construction:</strong> Hollow with 2mm walls to save filament</li>
+<li><strong>File format:</strong> STL for 3D printing</li>
+</ul>
+
+<h3>Files</h3>
+<ul>
+<li><code>pillar_connector.scad</code> - OpenSCAD source file (parametric, editable)</li>
+<li><code>pillar_connector.stl</code> - Ready-to-print STL file</li>
+</ul>
+
+<h3>Printing</h3>
+<p>Standard PLA settings should work fine. The model is designed for FDM/FFF printers with typical 0.4mm nozzles.</p>
+
+<ul>
+<li>Required:
+  <ul>
+  <li>"Detect thin walls" or "Wall generator: arachne"</li>
+  </ul>
+</li>
+<li>Optional:
+  <ul>
+  <li>Nominal layer height: &lt;= 0.20 mm</li>
+  <li>"Variable Layer Height"</li>
+  </ul>
+</li>
+</ul>
+
+<p>Use "Detect thin walls" ensures your slicer doesn't skip the "paper-thin" segments that fit the wall slots. Keeping these thin slots allows compatibilty with preexisting paper wall designs.</p>
+
+<h3>Customization</h3>
+<p>The OpenSCAD file is parametric. Edit the parameters at the top of <code>pillar_connector.scad</code> to adjust:</p>
+<ul>
+<li>Pillar height</li>
+<li>Face width</li>
+<li>Slot dimensions</li>
+<li>Wall thickness</li>
+</ul>
+
+<p>Regenerate the STL with:</p>
+<pre><code>openscad -o pillar_connector.stl pillar_connector.scad</code></pre>
+
+<h2>STL Viewer</h2>
+<p>This repository includes a web-based STL viewer for previewing all models. The viewer features:</p>
+<ul>
+<li>Split-screen interface with file list and 3D preview</li>
+<li>Interactive rotation and zoom controls</li>
+<li>Automatic file list generation</li>
+</ul>
+
+<h3>Viewing Currently Available Models</h3>
+<p><strong>Online:</strong> Visit <a href="https://frandallfarmer.github.io/3DProject/viewer.html">https://frandallfarmer.github.io/3DProject/viewer.html</a> to view all models in your browser.</p>
+
+<p><strong>Locally:</strong></p>
+<pre><code>python3 -m http.server 8000</code></pre>
+<p>Then open <a href="http://localhost:8000/viewer.html">http://localhost:8000/viewer.html</a> in your browser.</p>
+
+<h2>License</h2>
+<p>Everything here is under CC BY-SA-4.0, except the ViewSTL js files, which are under MIT - <a href="https://sourceforge.net/projects/viewstl/">https://sourceforge.net/projects/viewstl/</a> for the latest.</p>
+</body>
+</html>
