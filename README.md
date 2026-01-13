@@ -1,12 +1,23 @@
 # D&D Terrain Pillar Connector
 
-3D printable pillar connector for tabletop RPG paper terrain systems.
+3D printable pillar connector for tabletop RPG paper terrain compatible with Paper Realm's tab-and-slot wall model. https://paperrealms.com
 
 ## Description
 
-This pillar connector is designed to work with paper cardstock dungeon walls. The connector features slots on all four sides that accept paper wall tabs, allowing you to build modular dungeon interiors and building layouts.
+This pillar connector is designed to work with paper cardstock dungeon walls. The connector features slots on all four sides that accept paper wall tabs, allowing you to build modular dungeon interiors and building layouts. Paper Realms is also contributing templates and cutfiles for their tab-and-slot design model for anyone to customize for personal use!
 
-## Specifications
+This project was facilitated by [OldSchoolDM](https://oldschooldm.com), a paper-craft terrain aficionado, and implemented by his son. The driving desire was to support the minimum storage requirements for gaming terrain for dungeons and buildings. Inspired by the tab-and-slot design of Paper Realms, we wanted to add some heft - sturdiness and weight to the connectors. 3D Printing seemed like the perfect thing to hybrid with these compact but very detailed wall designs.
+
+## The Walls
+
+Paper Realms has contributed templates for you to customize your own paper walls to use with the 3D printed connectors (pillars) for this project.
+These pillars are compatible with existing 2" Paper Realm's walls - that's been on of our requirements for this project.
+
+See the walls [README](wall-templates/README.md) for more.
+
+## The Pillars
+
+### Specifications
 
 - **Height:** 2 inches (50.8mm)
 - **Cross-section:** 2/3" × 2/3" square (16.93mm)
@@ -14,12 +25,12 @@ This pillar connector is designed to work with paper cardstock dungeon walls. Th
 - **Construction:** Hollow with 2mm walls to save filament
 - **File format:** STL for 3D printing
 
-## Files
+### Files
 
 - `pillar_connector.scad` - OpenSCAD source file (parametric, editable)
 - `pillar_connector.stl` - Ready-to-print STL file
 
-## Printing
+### Printing
 
 Standard PLA settings should work fine. The model is designed for FDM/FFF printers with typical 0.4mm nozzles.
 
@@ -31,7 +42,7 @@ Standard PLA settings should work fine. The model is designed for FDM/FFF printe
 
 Use "Detect thin walls" ensures your slicer doesn't skip the "paper-thin" segments that fit the wall slots.  Keeping these thin slots allows compatibilty with preexisting paper wall designs.
 
-## Customization
+### Customization
 
 The OpenSCAD file is parametric. Edit the parameters at the top of `pillar_connector.scad` to adjust:
 - Pillar height
@@ -48,45 +59,20 @@ openscad -o pillar_connector.stl pillar_connector.scad
 
 This repository includes a web-based STL viewer for previewing all models. The viewer features:
 - Split-screen interface with file list and 3D preview
-- White background with flat-shaded models and black edge outlines
 - Interactive rotation and zoom controls
 - Automatic file list generation
 
-### Viewing Models
+### Viewing Currently Available Models
 
 **Online:** Visit https://frandallfarmer.github.io/3DProject/ to view all models in your browser.
 
 **Locally:**
+
 ```bash
 python3 -m http.server 8000
 ```
 Then open http://localhost:8000 in your browser.
 
-### Updating the File List
-
-The file list is automatically generated from the `/built_stls` directory:
-
-**Manual update:**
-```bash
-python3 build_file_list.py
-```
-
-**Automatic update:** When you push STL files to the `built_stls/` directory, a GitHub Action automatically:
-1. Runs `build_file_list.py` to regenerate `stl_files.json`
-2. Commits the updated file list
-3. Deploys to GitHub Pages
-
-You can also manually trigger the workflow from the GitHub Actions tab.
-
-### GitHub Pages Setup
-
-To enable GitHub Pages deployment:
-1. Go to repository Settings → Pages
-2. Under "Build and deployment", select "GitHub Actions" as the source
-3. Push changes to trigger the deployment
-
-The site will be available at `https://frandallfarmer.github.io/3DProject/`
-
 ## License
 
-CC SA-BY-4.0
+Everything here is under CC BY-SA-4.0, except the ViewSTL js files, which are under MIT - visit that project for the latest.
