@@ -38,6 +38,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Verify index.html exists
+        run: |
+          if [ ! -f index.html ]; then
+            echo "ERROR: index.html not found before artifact upload!"
+            exit 1
+          fi
+          echo "✓ index.html verified"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
