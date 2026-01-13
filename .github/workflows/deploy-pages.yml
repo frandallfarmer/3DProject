@@ -34,26 +34,9 @@ jobs:
             --metadata title="D&D Terrain Pillar Connector" \
             --css=style.css \
             -o index.html
-          if [ ! -f index.html ]; then
-            echo "ERROR: index.html was not created!"
-            exit 1
-          fi
-          echo "index.html created successfully:"
-          ls -lh index.html
-          echo "First 10 lines:"
-          head -n 10 index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Verify index.html before upload
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Files in current directory:"
-          ls -la | grep -E "(index|viewer|README)"
-          echo "Checking index.html:"
-          test -f index.html && echo "✓ index.html exists" || echo "✗ index.html MISSING"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
