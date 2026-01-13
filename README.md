@@ -8,6 +8,8 @@ This pillar connector is designed to work with paper cardstock dungeon walls. Th
 
 This project was facilitated by [OldSchoolDM](http://oldschooldm.com), a paper-craft terrain aficionado, and implemented by his son. The driving desire was to support the minimum storage requirements for gaming terrain for dungeons and buildings. Inspired by the tab-and-slot design of Paper Realms, we wanted to add some heft - sturdiness and weight to the connectors. 3D Printing seemed like the perfect thing to hybrid with these compact but very detailed wall designs.
 
+**[→ View 3D Models in Interactive Viewer](viewer.html)**
+
 ## The Walls
 
 Paper Realms has contributed templates for you to customize your own paper walls to use with the 3D printed connectors (pillars) for this project.
@@ -64,14 +66,14 @@ This repository includes a web-based STL viewer for previewing all models. The v
 
 ### Viewing Currently Available Models
 
-**Online:** Visit https://frandallfarmer.github.io/3DProject/ to view all models in your browser.
+**Online:** Visit https://frandallfarmer.github.io/3DProject/viewer.html to view all models in your browser.
 
 **Locally:**
 
 ```bash
 python3 -m http.server 8000
 ```
-Then open http://localhost:8000 in your browser.
+Then open http://localhost:8000/viewer.html in your browser.
 
 ## License
 

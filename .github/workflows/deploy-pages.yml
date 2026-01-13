@@ -26,6 +26,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Convert README to index.html
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pandoc
+          pandoc README.md -f gfm -t html -s \
+            --metadata title="D&D Terrain Pillar Connector" \
+            --css=style.css \
+            -o index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
