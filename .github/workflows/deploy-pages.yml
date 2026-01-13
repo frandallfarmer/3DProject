@@ -34,6 +34,14 @@ jobs:
             --metadata title="D&D Terrain Pillar Connector" \
             --css=style.css \
             -o index.html
+          if [ ! -f index.html ]; then
+            echo "ERROR: index.html was not created!"
+            exit 1
+          fi
+          echo "index.html created successfully:"
+          ls -lh index.html
+          echo "First 10 lines:"
+          head -n 10 index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
