@@ -39,6 +39,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Verify files before upload
+        run: |
+          echo "Files in current directory:"
+          ls -la
+          echo "Checking for index.html:"
+          test -f index.html && echo "index.html exists" || echo "index.html MISSING!"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
