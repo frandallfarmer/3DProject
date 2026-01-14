@@ -1,5 +1,7 @@
 # D&D Terrain Pillar Connector
 
+![Dry brushed aggregate pillars with dungeon walls](media/thumbnails/aggregate-brushed-walls-2.jpg)![Woodbeam pillars and tavern walls](media/thumbnails/woodbeam-tavern-2.jpg)![Two color log beams with temple walls](media/thumbnails/log-pillar-walls-1.jpg)![Cobblestone pillars with custom dungeon walls](media/thumbnails/cobblestone-walls.jpg)
+
 3D printable pillar connector for tabletop RPG paper terrain [repo](https://github.com/frandallfarmer/3DProject) compatible with Paper Realm's tab-and-slot wall model. https://paperrealms.com
 
 ## Description
