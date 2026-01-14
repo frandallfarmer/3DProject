@@ -1,6 +1,6 @@
 # D&D Terrain Pillar Connector
 
-3D printable pillar connector for tabletop RPG paper terrain compatible with Paper Realm's tab-and-slot wall model. https://paperrealms.com
+3D printable pillar connector for tabletop RPG paper terrain (repo)(https://github.com/frandallfarmer/3DProject) compatible with Paper Realm's tab-and-slot wall model. https://paperrealms.com
 
 ## Description
 
@@ -15,7 +15,7 @@ This project was facilitated by [OldSchoolDM](http://oldschooldm.com), a paper-c
 Paper Realms has contributed templates for you to customize your own paper walls to use with the 3D printed connectors (pillars) for this project.
 These pillars are compatible with existing 2" Paper Realm's walls - that's been on of our requirements for this project.
 
-See the walls [README](wall-templates/README.md) for more.
+See the walls [README](https://github.com/frandallfarmer/3DProject/tree/master/wall-templates) for more.
 
 ## The Pillars
 
