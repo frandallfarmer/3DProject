@@ -25,7 +25,7 @@ These .png files are templates you can use to create your own custom textured wa
 7) Enjoy!
 
 
-![kitbashed walls](https://raw.githubusercontent.com/frandallfarmer/3DProject/refs/heads/master/media/20251216_113748.jpg)
+![kitbashed walls](https://raw.githubusercontent.com/frandallfarmer/3DProject/refs/heads/master/media/custom-paper-walls.jpg)
 
 
 
