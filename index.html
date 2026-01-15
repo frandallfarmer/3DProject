@@ -2,90 +2,198 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>D&D Terrain Pillar Connector</title>
+  <title>D&amp;D Terrain Pillar Connector</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>D&D Terrain Pillar Connector</h1>
-<p>3D printable pillar connector for tabletop RPG paper terrain compatible with Paper Realm's tab-and-slot wall model. <a href="https://paperrealms.com">https://paperrealms.com</a></p>
-
-<h2>Description</h2>
-<p>This pillar connector is designed to work with paper cardstock dungeon walls. The connector features slots on all four sides that accept paper wall tabs, allowing you to build modular dungeon interiors and building layouts. Paper Realms is also contributing templates and cutfiles for their tab-and-slot design model for anyone to customize for personal use!</p>
-
-<p>This project was facilitated by <a href="http://oldschooldm.com">OldSchoolDM</a>, a paper-craft terrain aficionado, and implemented by his son. The driving desire was to support the minimum storage requirements for gaming terrain for dungeons and buildings. Inspired by the tab-and-slot design of Paper Realms, we wanted to add some heft - sturdiness and weight to the connectors. 3D Printing seemed like the perfect thing to hybrid with these compact but very detailed wall designs.</p>
-
-<p><strong><a href="viewer.html">→ View 3D Models in Interactive Viewer</a></strong></p>
-
-<h2>The Walls</h2>
-<p>Paper Realms has contributed templates for you to customize your own paper walls to use with the 3D printed connectors (pillars) for this project. These pillars are compatible with existing 2" Paper Realm's walls - that's been on of our requirements for this project.</p>
-
-<p>See the walls <a href="wall-templates/README.md">README</a> for more.</p>
-
-<h2>The Pillars</h2>
-
-<h3>Specifications</h3>
+<header id="title-block-header">
+<h1 class="title">D&amp;D Terrain Pillar Connector</h1>
+</header>
+<h1 id="dd-terrain-pillar-connector">D&amp;D Terrain Pillar
+Connector</h1>
+<p><img src="media/thumbnails/aggregate-brushed-walls-2.jpg"
+alt="Dry brushed aggregate pillars with dungeon walls" /><img
+src="media/thumbnails/woodbeam-tavern-2.jpg"
+alt="Woodbeam pillars and tavern walls" /><img
+src="media/thumbnails/log-pillar-walls-1.jpg"
+alt="Two color log beams with temple walls" /><img
+src="media/thumbnails/cobblestone-walls.jpg"
+alt="Cobblestone pillars with custom dungeon walls" /></p>
+<p>3D printable pillar connector for tabletop RPG paper terrain <a
+href="https://github.com/frandallfarmer/3DProject">repo</a> compatible
+with Paper Realm's tab-and-slot wall model. <a
+href="https://paperrealms.com">https://paperrealms.com</a></p>
+<h2 id="description">Description</h2>
+<p>This pillar connector is designed to work with paper cardstock
+dungeon walls. The connector features slots on all four sides that
+accept paper wall tabs, allowing you to build modular dungeon interiors
+and building layouts. Paper Realms is also contributing templates and
+cutfiles for their tab-and-slot design model for anyone to customize for
+personal use!</p>
+<p>This project was facilitated by <a
+href="http://oldschooldm.com">OldSchoolDM</a>, a paper-craft terrain
+aficionado, and implemented by his son. The driving desire was to
+support the minimum storage requirements for gaming terrain for dungeons
+and buildings. Inspired by the tab-and-slot design of Paper Realms, we
+wanted to add some heft - sturdiness and weight to the connectors. 3D
+Printing seemed like the perfect thing to hybrid with these compact but
+very detailed wall designs.</p>
+<p><strong><a href="viewer.html">→ View 3D Models in Interactive
+Viewer</a></strong></p>
+<h2 id="the-walls">The Walls</h2>
+<p>Paper Realms has contributed templates for you to customize your own
+paper walls to use with the 3D printed connectors (pillars) for this
+project. These pillars are compatible with existing 2" Paper Realm's
+walls - that's been on of our requirements for this project.</p>
+<p>See the walls <a
+href="https://github.com/frandallfarmer/3DProject/tree/master/wall-templates">README</a>
+for more.</p>
+<h2 id="the-pillars">The Pillars</h2>
+<h3 id="specifications">Specifications</h3>
 <ul>
 <li><strong>Height:</strong> 2 inches (50.8mm)</li>
 <li><strong>Cross-section:</strong> 2/3" × 2/3" square (16.93mm)</li>
-<li><strong>Slots:</strong> Four slots (one per face), centered, running 1" down from top</li>
-<li><strong>Construction:</strong> Hollow with 2mm walls to save filament</li>
+<li><strong>Slots:</strong> Four slots (one per face), centered, running
+1" down from top</li>
+<li><strong>Construction:</strong> Hollow with 2mm walls to save
+filament</li>
 <li><strong>File format:</strong> STL for 3D printing</li>
 </ul>
-
-<h3>Files</h3>
+<h3 id="files">Files</h3>
 <ul>
-<li><code>pillar_connector.scad</code> - OpenSCAD source file (parametric, editable)</li>
+<li><code>pillar_connector.scad</code> - OpenSCAD source file
+(parametric, editable)</li>
 <li><code>pillar_connector.stl</code> - Ready-to-print STL file</li>
 </ul>
-
-<h3>Printing</h3>
-<p>Standard PLA settings should work fine. The model is designed for FDM/FFF printers with typical 0.4mm nozzles.</p>
-
+<h3 id="printing">Printing</h3>
+<p>Standard PLA settings should work fine. The model is designed for
+FDM/FFF printers with typical 0.4mm nozzles.</p>
 <ul>
-<li>Required:
-  <ul>
-  <li>"Detect thin walls" or "Wall generator: arachne"</li>
-  </ul>
-</li>
-<li>Optional:
-  <ul>
-  <li>Nominal layer height: &lt;= 0.20 mm</li>
-  <li>"Variable Layer Height"</li>
-  </ul>
-</li>
+<li>Required:</li>
+<li>"Detect thin walls" or "Wall generator: arachne"</li>
+<li>Optional:</li>
+<li>Nominal layer height: &lt;= 0.20 mm</li>
+<li>"Variable Layer Height"</li>
 </ul>
-
-<p>Use "Detect thin walls" ensures your slicer doesn't skip the "paper-thin" segments that fit the wall slots. Keeping these thin slots allows compatibilty with preexisting paper wall designs.</p>
-
-<h3>Customization</h3>
-<p>The OpenSCAD file is parametric. Edit the parameters at the top of <code>pillar_connector.scad</code> to adjust:</p>
+<p>Use "Detect thin walls" ensures your slicer doesn't skip the
+"paper-thin" segments that fit the wall slots. Keeping these thin slots
+allows compatibilty with preexisting paper wall designs.</p>
+<h3 id="customization">Customization</h3>
+<p>The OpenSCAD file is parametric. Edit the parameters at the top of
+<code>pillar_connector.scad</code> to adjust:</p>
 <ul>
 <li>Pillar height</li>
 <li>Face width</li>
 <li>Slot dimensions</li>
 <li>Wall thickness</li>
 </ul>
-
 <p>Regenerate the STL with:</p>
-<pre><code>openscad -o pillar_connector.stl pillar_connector.scad</code></pre>
-
-<h2>STL Viewer</h2>
-<p>This repository includes a web-based STL viewer for previewing all models. The viewer features:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openscad</span> <span class="at">-o</span> pillar_connector.stl pillar_connector.scad</span></code></pre></div>
+<h2 id="stl-viewer">STL Viewer</h2>
+<p>This repository includes a web-based STL viewer for previewing all
+models. The viewer features:</p>
 <ul>
 <li>Split-screen interface with file list and 3D preview</li>
 <li>Interactive rotation and zoom controls</li>
 <li>Automatic file list generation</li>
 </ul>
-
-<h3>Viewing Currently Available Models</h3>
-<p><strong>Online:</strong> Visit <a href="https://frandallfarmer.github.io/3DProject/viewer.html">https://frandallfarmer.github.io/3DProject/viewer.html</a> to view all models in your browser.</p>
-
+<h3 id="viewing-currently-available-models">Viewing Currently Available
+Models</h3>
+<p><strong>Online:</strong> Visit <a
+href="https://frandallfarmer.github.io/3DProject/viewer.html">https://frandallfarmer.github.io/3DProject/viewer.html</a>
+to view all models in your browser.</p>
 <p><strong>Locally:</strong></p>
-<pre><code>python3 -m http.server 8000</code></pre>
-<p>Then open <a href="http://localhost:8000/viewer.html">http://localhost:8000/viewer.html</a> in your browser.</p>
-
-<h2>License</h2>
-<p>Everything here is under CC BY-SA-4.0, except the ViewSTL js files, which are under MIT - <a href="https://sourceforge.net/projects/viewstl/">https://sourceforge.net/projects/viewstl/</a> for the latest.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000</span></code></pre></div>
+<p>Then open http://localhost:8000/viewer.html in your browser.</p>
+<h2 id="license">License</h2>
+<p>Everything here is under CC BY-SA-4.0, except the ViewSTL js files,
+which are under MIT - <a
+href="https://sourceforge.net/projects/viewstl/">https://sourceforge.net/projects/viewstl/</a>
+for the latest.</p>
 </body>
 </html>
