@@ -2,7 +2,6 @@
 """
 Build script to generate a JSON file listing all STL files in built_stls directory.
 Run this script whenever STL files are added/removed/changed.
-(This comment exists to test workflow triggers)
 """
 
 import json
